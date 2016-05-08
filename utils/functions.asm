@@ -42,6 +42,28 @@ print:
 
 ;--------
 
+linefeed:
+  push rax
+  mov rax, 0Ah
+  push rax
+  mov rax, rsp
+  call print
+  pop rax
+  pop rax
+  ret
+
+;--------
+
+printLF:
+  push rax
+
+  call print
+  call linefeed
+
+  pop rax
+  ret
+
+;--------
 exit:
   mov rbx, 0
   mov rax, 0x2000001
