@@ -4,6 +4,8 @@
 # Unignore all with extensions
 !*.*
 
+# Unignore utils
+!utils/
 # Ignore .o
 *.o
 
