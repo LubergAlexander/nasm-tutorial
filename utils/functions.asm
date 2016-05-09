@@ -24,6 +24,7 @@ finished:
 print:
   push rdi
   push rsi
+  push rcx
 
   push rax
   call length
@@ -35,6 +36,7 @@ print:
   mov rax, 0x2000004 ; write
   syscall
 
+  pop rcx
   pop rsi
   pop rdi
 
